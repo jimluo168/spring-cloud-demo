@@ -1,0 +1,13 @@
+target/
+buildNumber.properties
+*.iml
+*/*.iml
+.idea/
+
+.classpath
+.project
+.settings/
+bin/
+logs
+.DS_Store
+**.DS_Store
