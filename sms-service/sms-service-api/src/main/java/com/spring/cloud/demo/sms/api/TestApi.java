@@ -1,0 +1,26 @@
+package com.spring.cloud.demo.sms.api;
+
+import com.spring.cloud.demo.common.model.Result;
+import com.spring.cloud.demo.sms.feign.TestApiFeignFallback;
+import com.spring.cloud.demo.sms.vo.TestVo;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+/**
+ * Test Api.
+ *
+ * @author luojm
+ * @date 2020/6/1 12:50
+ */
+@RequestMapping("/test")
+@FeignClient(name = "sms-service", fallbackFactory = TestApiFeignFallback.class)
+public interface TestApi {
+
+    @GetMapping("/sayHello")
+    Result<String> sayHello(@RequestParam String name);
+
+    @GetMapping("sayHello2")
+    Result<TestVo> sayHello2(@RequestParam String name);
+}

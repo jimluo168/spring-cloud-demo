@@ -1,0 +1,18 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: uc-service
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+eureka:
+  client:
+    service-url:
+      # EurekaServer地址,假如Eureka需要配置多个
+      defaultZone: http://127.0.0.1:8761/eureka
+  instance:
+    # 当调用getHostname获取实例的hostname时，返回ip而不是host名称
+    prefer-ip-address: true
+
