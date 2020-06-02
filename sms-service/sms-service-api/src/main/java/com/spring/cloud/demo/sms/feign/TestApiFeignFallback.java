@@ -3,6 +3,7 @@ package com.spring.cloud.demo.sms.feign;
 import com.spring.cloud.demo.common.model.Result;
 import com.spring.cloud.demo.sms.api.TestApi;
 import com.spring.cloud.demo.sms.vo.TestVo;
+import com.spring.cloud.demo.sms.vo.TestVo2;
 import feign.hystrix.FallbackFactory;
 
 /**
@@ -23,6 +24,11 @@ public class TestApiFeignFallback implements FallbackFactory<TestApi> {
 
             @Override
             public Result<TestVo> sayHello2(String name) {
+                return FeignFallbackUtil.fallback(throwable);
+            }
+
+            @Override
+            public Result<TestVo> sayHello3(TestVo vo1, TestVo2 vo2) {
                 return FeignFallbackUtil.fallback(throwable);
             }
         };

@@ -1,7 +1,6 @@
 package com.spring.cloud.demo.sms.vo;
 
 import lombok.Data;
-import lombok.experimental.Accessors;
 
 /**
  * Test Vo.
@@ -10,7 +9,6 @@ import lombok.experimental.Accessors;
  * @date 2020/6/1 15:40
  */
 @Data
-@Accessors(chain = true)
-public class TestVo {
-    private String name;
+public class TestVo2 {
+    private String name2;
 }
