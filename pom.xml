@@ -18,7 +18,7 @@
         <spring-cloud-commons.version>2.2.2.RELEASE</spring-cloud-commons.version>
 
         <!-- Maven Plugin Version -->
-        <flatten-maven-plugin.version>1.1.0</flatten-maven-plugin.version>
+        <flatten-maven-plugin.version>1.2.2</flatten-maven-plugin.version>
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
         <maven-source-plugin.version>2.2.1</maven-source-plugin.version>
         <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
@@ -29,6 +29,7 @@
         <module>uc-service</module>
         <module>sms-service</module>
         <module>common-web</module>
+        <module>auth2-service</module>
     </modules>
 
     <dependencyManagement>
@@ -113,7 +114,7 @@
                 <version>${flatten-maven-plugin.version}</version>
                 <configuration>
                     <updatePomFile>true</updatePomFile>
-                    <flattenMode>resolveCiFriendliesOnly</flattenMode>
+                    <flattenMode>clean</flattenMode>
                 </configuration>
                 <executions>
                     <execution>

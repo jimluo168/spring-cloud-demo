@@ -21,7 +21,6 @@
         <dependency>
             <groupId>com.spring.cloud.demo</groupId>
             <artifactId>common-web</artifactId>
-            <version>${revision}</version>
         </dependency>
 
     </dependencies>

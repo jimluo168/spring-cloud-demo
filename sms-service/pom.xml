@@ -17,6 +17,20 @@
         <module>sms-service-impl</module>
     </modules>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.spring.cloud.demo</groupId>
+                <artifactId>common-web</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.spring.cloud.demo</groupId>
+                <artifactId>sms-service-api</artifactId>
+                <version>${revision}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
@@ -24,6 +38,8 @@
             <artifactId>spring-web</artifactId>
         </dependency>
     </dependencies>
+
+
 
 
 </project>
