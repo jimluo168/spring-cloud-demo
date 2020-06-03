@@ -38,8 +38,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
+            <groupId>com.spring.cloud.demo</groupId>
+            <artifactId>common-web</artifactId>
         </dependency>
     </dependencies>
 </project>
