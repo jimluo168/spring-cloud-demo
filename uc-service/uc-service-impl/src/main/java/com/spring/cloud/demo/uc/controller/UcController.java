@@ -17,18 +17,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UcController implements UserApi {
 
-    @Autowired
-    private TestApi testApi;
+  @Autowired
+  private TestApi testApi;
 
-    @Override
-    public Result<TestVo> getAccount() {
-//        Result<String> rs = testApi.sayHello("get account");
-//        Result<TestVo> rs2 = testApi.sayHello2("get account by testVo");
-        TestVo vo1 = new TestVo();
-        vo1.setName("vo1");
-        TestVo2 vo2 = new TestVo2();
-        vo2.setName2("vo2");
-        Result<TestVo> rs3 = testApi.sayHello3(vo1, vo2);
-        return rs3;
-    }
+  @Override
+  public Result<TestVo> getAccount() {
+    Result<String> rs = testApi.sayHello("get account");
+    Result<TestVo> rs2 = testApi.sayHello2("get account by testVo");
+    TestVo vo1 = new TestVo();
+    vo1.setName("vo1");
+    TestVo2 vo2 = new TestVo2();
+    vo2.setName2("vo2");
+    Result<TestVo> rs3 = testApi.sayHello3(vo1, vo2);
+    return rs3;
+  }
 }

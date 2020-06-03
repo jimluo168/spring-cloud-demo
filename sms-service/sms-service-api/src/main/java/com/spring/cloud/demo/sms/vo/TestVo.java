@@ -1,6 +1,5 @@
 package com.spring.cloud.demo.sms.vo;
 
-import com.spring.cloud.demo.common.web.feign.IMyParam;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -12,6 +11,8 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(chain = true)
-public class TestVo implements IMyParam {
-    private String name;
+public class TestVo {
+  private String name;
+
+  private String name2;
 }
