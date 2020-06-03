@@ -1,8 +1,8 @@
 package com.spring.cloud.demo.uc.api;
 
 import com.spring.cloud.demo.common.model.Result;
+import com.spring.cloud.demo.sms.vo.TestVo;
 import com.spring.cloud.demo.uc.feign.UserApiFeignFallback;
-import org.aspectj.weaver.ast.ITestVisitor;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,5 +18,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface UserApi {
 
     @GetMapping("/getAccount")
-    Result<String> getAccount();
+    Result<TestVo> getAccount();
 }

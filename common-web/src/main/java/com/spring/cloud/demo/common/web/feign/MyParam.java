@@ -14,4 +14,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.PARAMETER)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface MyParam {
+    String value() default "";
+
+    boolean encoded() default false;
 }

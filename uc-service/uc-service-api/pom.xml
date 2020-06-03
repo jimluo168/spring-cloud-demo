@@ -21,6 +21,10 @@
             <groupId>com.spring.cloud.demo</groupId>
             <artifactId>common-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.spring.cloud.demo</groupId>
+            <artifactId>sms-service-api</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

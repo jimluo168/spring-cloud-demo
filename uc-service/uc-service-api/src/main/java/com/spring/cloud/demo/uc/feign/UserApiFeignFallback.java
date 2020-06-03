@@ -1,6 +1,7 @@
 package com.spring.cloud.demo.uc.feign;
 
 import com.spring.cloud.demo.common.model.Result;
+import com.spring.cloud.demo.sms.vo.TestVo;
 import com.spring.cloud.demo.uc.api.UserApi;
 import feign.hystrix.FallbackFactory;
 
@@ -15,7 +16,7 @@ public class UserApiFeignFallback implements FallbackFactory<UserApi> {
     public UserApi create(Throwable throwable) {
         return new UserApi() {
             @Override
-            public Result<String> getAccount() {
+            public Result<TestVo> getAccount() {
                 return FeignFallbackUtil.fallback(throwable);
             }
         };
